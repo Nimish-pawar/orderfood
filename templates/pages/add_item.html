@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Item</title>
+</head>
+<body>
+    <h1>Add Item to Cart</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" required><br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required><br>
+        <button type="submit">Add Item</button>
+    </form>
+    <a href="{% url 'cart:show_cart' %}">View Cart</a>
+</body>
+</html>

@@ -1,0 +1,249 @@
+:root {
+    --primaryColor: #0e6253;
+    --secondaryColor: #ffc187;
+    --whiteColor: #fff;
+    --blackColor: #222;
+    --softGreenColor: #d9f2ee;
+    --darkGreyColor: #a7a7a7;
+    --greyColor: #f5f5f5;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.sidebar{
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+.sidebar-menus {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-menus a , .sidebar-logout a {
+    padding: 5% 8%;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--whiteColor);
+
+}
+
+.sidebar-menus a ion-icon , .sidebar-logout a ion-icon {
+    font-size: 20px;
+}
+
+.sidebar-menus a:hover , .sidebar-logout a:hover{
+    background-color: var(--secondaryColor);
+    border-radius: 50px;
+}
+
+.main {
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;
+    padding: 2%;
+    background-color: var(--softGreenColor);
+    margin-left: 250px;
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.search {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--whiteColor);
+    border-radius: 20px;
+}
+
+.search input {
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+} 
+
+.search-btn {
+    background-color: var(--secondaryColor);
+    color: var(--whiteColor);
+    border: none;
+    border-radius: 20px;
+    width: 120px;
+    cursor: pointer;
+    float: right;
+}
+
+.search:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px ;
+}
+
+.search-btn:hover {
+    background-color: var(--primaryColor);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cart, .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--whiteColor);
+    font-size: 20px;
+    color: var(--primaryColor);
+    text-decoration: none;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.cart:hover, .user:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+
+/* .card {
+    width: 500px;
+    height: 600px;
+    flex-direction: row;
+    max-width: 30em;
+    border: 0;
+    background-color: #696969;
+    color: #fff;
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.18);
+} */
+/* .card img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0.5em;
+    border-radius: 0.7em;
+ } */
+/* .card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} */
+.text-section {
+    max-width: 60%;
+ }
+.cta-section {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.cta-section .btn {
+    padding: 0.2em 0.5em;
+    font-size: 1em;
+    color: #696969;
+}
+.card-text {
+    letter-spacing: 0.1em;
+}
+
+
+.main-filter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.filter-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100px;
+    gap: 1.2rem;
+}
+
+.filter-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 80px;
+    height: 100%;
+    background-color: var(--whiteColor);
+    color: var(--blackColor);
+    border-radius: 8px;
+    border: 1px solid var(--softGreenColor);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    font-size: 30px;
+    background-color: var(--softGreenColor);
+    color: var(--primaryColor);
+    border-radius: 8px;
+}
+
+.filter-card:hover {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+.filter-card:hover .filter-icon{
+    background-color: var(--whiteColor);
+}
+
+.divider {
+    margin: 1rem 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--primaryColor);
+    border: none;
+}
+
